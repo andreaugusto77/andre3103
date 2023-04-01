@@ -1,0 +1,38 @@
+<html>
+<body>
+<h2>Cadastro do Professor</h2>
+<form name="CadProf" action="" onsubmit="return CriticaCampos();">
+    <label for="matprof">Matrícula do professor:</label><br>
+    <input type="text" name="matprof"><br><br>
+    <label for="nomprof">Nome do Professor:</label><br>
+    <input type="text" name="nomprof"><br><br>
+    <label for="curprof">Curso do Professor:</label><br>
+    <input type="text" name="curprof"><br><br>
+    <label for="disprof">Disciplina do Professor:</label><br>
+    <input type="text" name="disprof"><br><br>
+    <input type="submit" value="enviar">
+</form>
+
+<button type="button" onclick="LimpaCampos"
+<script>
+    function CriticaCampos() {
+        if (document.forms["CadProf"]["matprof"].value == "") {
+            window.alert("Matrícula do professor não pode ficar vazia!");
+            return false;
+        } else if (document.forms["CadProf"]["nomprof"].value == "") {
+            window.alert("Nome do Professor não pode ficar vazio!");
+            return false;
+        } else if (document.forms["CadProf"]["curprof"].value == "") {
+            window.alert("Curso do professor não pode ficar vazio!");
+            return false;
+        } else if (document.forms["CadProf"]["disprof"].value == "") {
+            window.alert("Disciplina do professor não pode ficar vazia!");
+            return false;
+        } else {
+            window.alert("Todos os campos estão preenchidos. Serão enviados para o SGBD!");
+            return true;
+        }
+    }
+</script>
+</body>
+</html>
